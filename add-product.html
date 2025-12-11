@@ -26,6 +26,23 @@
       <label>Product Price</label>
     </div>
 
+        <div class="floating-label">
+      <select [(ngModel)]="newCategoryId"
+              id="categoryId"
+              name="categoryId"
+              required>
+        <option value="" disabled hidden></option>
+
+        @for (category of categories; track category.categoryId) {
+          <option [value]="category.categoryId">
+            {{ category.categoryName }}
+          </option>
+        }
+      </select>
+      <label>Category</label>
+    </div>
+    
+    
     <div class="floating-label">
       <input
         type="date"
