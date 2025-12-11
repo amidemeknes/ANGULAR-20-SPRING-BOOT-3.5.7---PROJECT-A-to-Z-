@@ -2,12 +2,15 @@
   position: relative;
   margin-bottom: 1.5rem;
 
-  input {
+  input,
+  select {
     width: 100%;
     padding: 10px;
     border: 1px solid #bbb;
     border-radius: 6px;
     transition: 0.2s;
+    background: white;
+    appearance: none; // optionnel : style propre
   }
 
   label {
@@ -21,6 +24,7 @@
     transition: 0.2s ease;
   }
 
+  // ---- POUR INPUT ----
   input:focus + label,
   input:not(:placeholder-shown) + label {
     top: -10px;
